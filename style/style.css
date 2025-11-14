@@ -1,0 +1,124 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+/* Global variables */
+:root {
+  --bg-light: white;
+  --text-dark: rgb(50, 50, 50);
+  --bg-dark: rgb(25, 25, 25);
+  --text-light: whitesmoke;
+  --bg-light-active: rgba(255, 255, 255, 0.5);
+  --bg-dark-active: rgba(25, 25, 25, 0.5);
+  --text-dark-active: rgba(50, 50, 50, 0.5);
+  --text-light-active: rgba(245, 245, 245, 0.5);
+  --border-dark-active: rgba(25, 25, 25, 0.2);
+  --border-light-active: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  transition: all 0.3s ease;
+}
+
+.results {
+  transition: all 0.3s ease;
+  color: var(--text-light);
+  text-align: center;
+  opacity: 0;
+}
+
+.objective {
+  font-weight: bold;
+  margin: 5px;
+  color: yellow;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.translator {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  gap: 20px;
+}
+
+.random-word-container {
+  border: 1px dashed var(--bg-light);
+  border-radius: 15px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.input {
+  font-size: 0.9rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border-color: var(--bg-light);
+  color: var(--text-light);
+  outline: none;
+}
+
+button {
+  font-size: 0.9rem;
+  padding: 15px;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-align: center;
+  border: 1px solid var(--bg-light);
+  border-radius: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.guesses {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.guesses p {
+  margin: 10px auto;
+}
+
+@media (max-width: 428px) and (max-width: 926px) {
+  .guesses {
+    flex-direction: column;
+    gap: 0px;
+  }
+}

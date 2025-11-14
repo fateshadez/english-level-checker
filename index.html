@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/imgs/flower.png" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/7efba6ae0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/script.js" defer></script>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>JQuery</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="container">
+        <div class="results"></div>
+        <button class="restart">Restart</button>
+        <div class="translator">
+          <p class="objective">Translate this word:</p>
+          <div class="random-word-container">
+            <p class="random-word"></p>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter your translation"
+            />
+          </div>
+        </div>
+        <button class="check-btn">Check translation</button>
+        <button class="idk-btn">I don't know</button>
+      </div>
+      <div class="guesses">
+        <p>Correct guesses: <span class="correct-guesses"></span></p>
+        <p>Incorrect guesses: <span class="incorrect-guesses"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
