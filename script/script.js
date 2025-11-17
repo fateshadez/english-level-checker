@@ -7,9 +7,10 @@ const restartBtn = $(".restart");
 const displayCorrectGuesses = $(".correct-guesses");
 const displayIncorrectGuesses = $(".incorrect-guesses");
 const results = $(".results");
+const wordsTranslated = $(".words-translated");
 
-$("p:eq(2)").css("color", "green");
-$("p:eq(3)").css("color", "red");
+$("p:eq(3)").css("color", "green");
+$("p:eq(4)").css("color", "red");
 
 let correctGuesses = 0;
 let incorrectGuesses = 0;
@@ -110,6 +111,7 @@ const words = [
   },
 ];
 
+let totalWords = words.length;
 let currentWord = null;
 
 let usedWords = new Set();
@@ -174,10 +176,10 @@ const translate = (Input) => {
 const updateGuesses = () => {
   displayCorrectGuesses.text(correctGuesses);
   displayIncorrectGuesses.text(incorrectGuesses);
+  wordsTranslated.text(`Word ${usedWords.size + 1} of ${totalWords}`);
 };
 
 const restart = () => {
-  nextWord();
   score = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
@@ -203,7 +205,7 @@ const showResults = () => {
   } else if (score >= englishLvls.A1) {
     englishLvl = "A1!";
   } else if (score < englishLvls.A1) {
-    englishLvl = "non-existent!!!";
+    englishLvl = "bad!!!";
   }
   results.text(
     `Well done! Your score is ${score}! Your approximate English level is ${englishLvl}`
