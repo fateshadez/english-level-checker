@@ -177,7 +177,7 @@ const updateGuesses = () => {
 };
 
 const restart = () => {
-  nextWord();jq
+  nextWord();
   score = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
